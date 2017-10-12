@@ -6,15 +6,66 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
         <title>hercus</title>
 		
-		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="js/jquery-3.2.1.js"></script>
+		
+		<script>
+    	$(document).ready(function(){
+			$('a[href^="#"]').bind('click.smoothscroll',function (e) {
+ 			/*e.preventDefault();
+ 
+			var target = this.hash,
+ 			$target = $(target);
+ 
+			$('html, body').stop().animate({
+ 				'scrollTop': $target.offset().top
+ 			}, 500, 'swing', function () {
 
+ 			window.location.hash = target;
+			});*/
+			var body = $("html, body");
+body.stop().animate({scrollTop:1000}, 1, function() { 
+   //alert("Finished animating");
+});
+			});
+			});
+		</script>
+
+			<script>
+					window.onload= function() {
+					document.getElementById('trigger').onclick = function() {
+						openbox('box', this);
+						return false;
+					};
+				};
+					function openbox(id, toggler) {
+						var div = document.getElementById(id);
+						if(div.style.display == 'block') {
+							div.style.display = 'none';
+						}
+						else {
+							div.style.display = 'block';
+						}
+				}
+			</script>
+			
     </head>
 
 	<body>
 	
 		<?php include 'assets/header.php'; ?>
 	
-		<div id="block1">
+		<div id="block1">	
+			<div id="menu">
+				<a id='trigger'><img src="img/mn.png"></a>
+				<div id='box' style="display:none;">
+					<ul>
+						<li><a href="#block1">example</a></li>
+						<li><a href="#block2">example</a></li>
+						<li><a href="#block3">example</a></li>
+					</ul>
+				</div>	
+			</div>
+			
 			<div><img src="img/lateko.png"></div>
 			<div class="content">
 				<h1><b>HERCUS karte</b> ar kredītlīniju -</h1>

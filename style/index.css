@@ -177,5 +177,36 @@ button{
 .buttonflex a{
 	cursor: pointer;
 }
+#menu{
+	position: fixed;
+    top: 1vw;
+    right: 1vw;
+    z-index: 3;
+}
+#menu img{
+	width: 3vw !Important;
+}
+#box ul{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+	position: absolute;
+	color: white;
+	right: 8vw;
+    top: 1.3vw;
+}
+#box a{
+	font-size: 1vw;
+	text-transform: capitalize;
+	padding: 0.5vw;
+	cursor: pointer;
+	opacity: 0.6;
+    font-weight: 100;
+}
+#box a:hover{
+	opacity: 1;
+}
 @media screen and (max-width: 900px){
 }
