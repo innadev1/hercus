@@ -62,6 +62,8 @@ body.stop().animate({scrollTop:1000}, 1, function() {
 						<li><a href="#block1">example</a></li>
 						<li><a href="#block2">example</a></li>
 						<li><a href="#block3">example</a></li>
+						<li><a href="#block4">example</a></li>
+						<li><a href="#block5">example</a></li>
 					</ul>
 				</div>	
 			</div>
