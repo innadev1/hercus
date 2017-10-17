@@ -60,13 +60,6 @@ body.stop().animate({scrollTop:1000}, 1, function() {
 	
 		<?php include 'assets/header.php'; ?>
 	
-		<div id="block1">	
-				
-		<div class=langs >
-			<li><a href="?lang=lv"><?php echo $language[$lang]['LV'] ?></a></li>
-			<li><a href="?lang=ru"><?php echo $language[$lang]['RU'] ?></a></li>
-		</div>
-
 			<div id="menu">
 				<a id='trigger'><img src="img/mn.png"></a>
 				
@@ -77,10 +70,14 @@ body.stop().animate({scrollTop:1000}, 1, function() {
 						<li><a href="#block3">example</a></li>
 						<li><a href="#block4">example</a></li>
 						<li><a href="#block5">example</a></li>
+						<li><a href="?lang=lv"><?php echo $language[$lang]['LV'] ?></a></li>
+						<li><a href="?lang=ru"><?php echo $language[$lang]['RU'] ?></a></li>
 					</ul>
-				</div>	
+				</div>
 			</div>
-			
+	
+		<div id="block1">	
+				
 			<div><img src="img/lateko.png"></div>
 			<div class="content">
 				<h1><b><?php echo $language[$lang]['hercus-cart'] ?></h1>
