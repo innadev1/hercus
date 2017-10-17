@@ -118,7 +118,7 @@
         $language['lv']['lic'] = 'Licence';
         $language['lv']['pris'] = 'Cenrādis';
 
-    $language['lv']['jur_information'] = 'JURIDISKĀ INFORMĀCIJA.';
+    $language['lv']['jur_information'] = 'JURIDISKĀ INFORMĀCIJA';
         $language['lv']['priv'] = 'Privātuma atruna';
         $language['lv']['autor'] = 'Autortiesības';
 
@@ -139,7 +139,7 @@
         $language['ru']['lic'] = 'лицензия';
         $language['ru']['pris'] = 'прейскурант';
 
-    $language['ru']['jur_information'] = 'ЮРИДИЧЕСКАЯ ИНФОРМАЦИЯ.';
+    $language['ru']['jur_information'] = 'ЮРИДИЧЕСКАЯ ИНФОРМАЦИЯ';
         $language['ru']['priv'] = 'Конфиденциальность';
         $language['ru']['autor'] = 'авторское право';
 

@@ -9,14 +9,14 @@
 <footer class="wrapf">
 	<div id="footer">
 		<div class="footer_logo"><img src="img/lateko.png"></div>
-		<div>
+		<div id="f">
 			<ul>
 				<li><h5><?php echo $language[$lang]['contacts']?></h5></li>
 				<li><a>+67775079</a></li>
 				<li><a>info@latekolizings.lv</a></li>
 			</ul>
 		</div>
-		<div>
+		<div id="s">
 			<ul>
 				<li><h5><?php echo $language[$lang]['client']?></h5></li>
 				<li><a><?php echo $language[$lang]['ak']?></a></li>
@@ -24,7 +24,7 @@
 				<li><a><?php echo $language[$lang]['pa']?></a></li>
 			</ul>
 		</div>
-		<div>
+		<div id="t">
 			<ul>
 			<li><h5><?php echo $language[$lang]['latlizing']?></h5></li>
 			<li><a><?php echo $language[$lang]['us']?></a></li>
@@ -33,7 +33,7 @@
 			<li><a><?php echo $language[$lang]['pris']?></a></li>
 			</ul>
 		</div>
-		<div>
+		<div id="fo">
 			<ul>
 			<li><h5><?php echo $language[$lang]['jur_information']?></h5></li>
 			<li><a><?php echo $language[$lang]['priv']?></a></li>
@@ -42,13 +42,15 @@
 		</div>
 	</div>
 	<div id="footer2">
-		<div class="wrapf">
+		<div class="wraps" id="fiv">
 			<div><h5><?php echo $language[$lang]['1']?></h5></div>
-			<div><img src="img/fb.png"></div>
-			<div><img src="img/tw.png"></div>
-			<div><img src="img/g.png"></div>
-			<div><img src="img/in.png"></div>
-			<div><img src="img/y.png"></div>
+			<div id="socials">
+				<div><img src="img/fb.png"></div>
+				<div><img src="img/tw.png"></div>
+				<div><img src="img/g.png"></div>
+				<div><img src="img/in.png"></div>
+				<div><img src="img/y.png"></div>
+			</div>
 		</div>
 		<div><p><?php echo $language[$lang]['2']?></p></div>
 	</div>

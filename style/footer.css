@@ -4,7 +4,7 @@ footer{
 	color: white;
 	justify-content: space-between;
 }
-.wrapf{
+.wrapf, .wraps, #socials{
 	display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -55,6 +55,59 @@ footer h5{
 #footer2 img{
 	width: 1vw;
 	cursor: pointer;
+	padding-left: 0.5vw;
 }
 @media screen and (max-width: 900px){
+footer {
+    padding: 5vw 10vw 5vw 10vw;
+}
+.wrapf, .wraps {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: -webkit-center;
+}
+#footer {
+    width: 100%;
+    flex-direction: column;
+}
+#footer div {
+    width: unset;
+}
+.footer_logo img {
+    width: 25vw;
+}
+footer h5 {
+    font-size: 3vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 3vw;
+    margin-top: 15vw;
+}
+#footer a {
+    font-size: 3vw;
+    opacity: 0.8;
+}
+#footer li {
+    line-height: 5vw;
+}
+#t, #fo{display:none;}
+#footer2 img {
+    width: 4vw;
+    padding: 3vw;
+    padding-top: 5vw;
+    padding-bottom: 20vw;
+}
+footer p {
+    font-size: 2.5vw;
+}
+#socials {
+    justify-content: center;
+}
+.langs{display:none;}
+
 }
