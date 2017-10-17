@@ -210,3 +210,13 @@ button{
 }
 @media screen and (max-width: 900px){
 }
+
+.langs{
+    display: inline-flex;
+    color: white;
+}
+
+.langs li a{
+    margin-right: 10px;
+    font-size: 18px;
+}
