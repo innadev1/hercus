@@ -14,28 +14,6 @@
 		
 		<script src="js/jquery-3.2.1.js"></script>
 		
-		<script>
-    	$(document).ready(function(){
-			$('a[href^="#"]').bind('click.smoothscroll',function (e) {
- 			/*e.preventDefault();
- 
-			var target = this.hash,
- 			$target = $(target);
- 
-			$('html, body').stop().animate({
- 				'scrollTop': $target.offset().top
- 			}, 500, 'swing', function () {
-
- 			window.location.hash = target;
-			});*/
-			var body = $("html, body");
-body.stop().animate({scrollTop:1000}, 1, function() { 
-   //alert("Finished animating");
-});
-			});
-			});
-		</script>
-
 			<script>
 					window.onload= function() {
 					document.getElementById('trigger').onclick = function() {
@@ -52,6 +30,17 @@ body.stop().animate({scrollTop:1000}, 1, function() {
 							div.style.display = 'block';
 						}
 				}
+			</script>
+			
+			<script>
+			$(document).ready(function(){
+				$(".toggler").click(function () {
+				$("#box1").css("display","block");
+			});
+				$("#close").click(function () {
+				$("#box1").css("display","none");
+			});
+			});
 			</script>
 			
     </head>
@@ -85,9 +74,41 @@ body.stop().animate({scrollTop:1000}, 1, function() {
 
 				<p><?php echo $language[$lang]['credit'] ?></p>
 				
-				<button><?php echo $language[$lang]['subscribe'] ?></button>
+				<button class="toggler"><?php echo $language[$lang]['subscribe'] ?></button>
 			</div>
 		</div>
+		
+		<div id="box1" style="display:none; font-weight: 50px;">
+			<div id="close"><a>X</a></div>
+			
+			<div class="ddd">
+			<p>Gara forma</p>
+			<p>Īsa forma</p>
+			</div>
+		</div>
+		
+		<style>
+		
+		#box1{
+			width: 30%;
+			height: 10vw;
+			background-color: white;
+			position: fixed;
+			margin-left: 35%;
+			margin-right: 35%;
+			z-index: 10;
+			top: 15vw;
+		}
+		#close{
+			cursor: pointer;
+		}
+		.ddd{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		</style>
 		
 		<div id="block2">
 			<div class="content2">
@@ -135,7 +156,7 @@ body.stop().animate({scrollTop:1000}, 1, function() {
 		<div id="block4">
 			<div class="content4">
 				<h3><b><?php echo $language[$lang]['how_get_cart']?></h3>
-				<button><?php echo $language[$lang]['subscribe']?></button>
+				<button class="toggler"><?php echo $language[$lang]['subscribe']?></button>
 			</div>
 			
 			<div class="content5">
