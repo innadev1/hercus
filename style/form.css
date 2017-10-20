@@ -1,0 +1,187 @@
+/*GALVENA*/
+#box1{
+	width: 350px;
+    height: 350px;
+    background-color: white;
+    position: fixed;
+    z-index: 10;
+    top: 10vw;
+    border-radius: 20px;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+}
+.box_content{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	width: 350px;
+    height: 350px;
+}
+.close{
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.text_in_form{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text_in_form h5{
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    color: rgba(17, 17, 17, 0.7);
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1;
+    margin: 0;
+	margin-bottom: 10px;
+}
+.button_blue{
+	background-color: #2fa8da;
+}
+.button_green{
+	background-color: #94da2f;
+}
+.button_green, .button_blue{
+    border-radius: 10vw;
+    font-size: 12px;
+    border: 0;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    margin-top: unset;
+    box-shadow: none;
+    cursor: pointer;
+    width: 170px;
+	margin: 10px;
+}
+/*ISA*/
+.green-background{
+	background-color: #94da2f;
+    width: 350px;
+    border-radius: 20px 20px 0 0;
+    height: 60px;
+    position: absolute;
+    top: 0;
+}
+.green-background p{
+	color: white;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1;
+    margin-top: 23px;
+}
+form{
+	margin-top: 40px;
+}
+#box2{
+	width: 350px;
+    height: 350px;
+    background-color: white;
+    position: fixed;
+    z-index: 10;
+    top: 10vw;
+    border-radius: 20px;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+}
+.remodal{padding:20px}
+.name{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+	display: flex;
+}
+.name input{
+    border-radius: 17px;
+    width: 120px;
+    height: 30px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+    margin: 5px;
+    font-size: 13px;
+}
+#code input{
+	border-radius: 17px;
+    width: 250px;
+    height: 30px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+    margin: 5px;
+    font-size: 13px;
+}
+.kontakti, .col-sm-12{
+	text-align: center;
+}
+.kontakti input{
+	border-radius: 17px;
+    width: 120px;
+    height: 30px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+    margin: 5px;
+    font-size: 13px;
+}
+.col-sm-12 input{
+    border-radius: 10vw;
+    font-size: 12px;
+    border: 0;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    margin-top: unset;
+    box-shadow: none;
+    cursor: pointer;
+    width: 100px;
+    margin-top: 10px;
+    border: none;
+    background-color: #94da2f;
+}
+/*GARA*/
+.blue-background{
+	background-color: #2fa8da;
+    width: 350px;
+    border-radius: 20px 20px 0 0;
+    height: 60px;
+    position: absolute;
+    top: 0;
+}
+.blue-background p{
+	color: white;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1;
+    margin-top: 23px;
+}
+#box3{
+	width: 350px;
+    height: 350px;
+    background-color: white;
+    position: fixed;
+    z-index: 10;
+    top: 10vw;
+    border-radius: 20px;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+}

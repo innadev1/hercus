@@ -194,8 +194,8 @@ button{
     display: flex;
 	position: absolute;
 	color: white;
-	right: 8vw;
-    top: 1.3vw;
+    right: 6vw;
+    top: 0;
 }
 #box a{
 	font-size: 1vw;
