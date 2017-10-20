@@ -45,11 +45,12 @@
 		<div class="wraps" id="fiv">
 			<div><h5><?php echo $language[$lang]['1']?></h5></div>
 			<div id="socials">
-				<div><img src="img/fb.png"></div>
-				<div><img src="img/tw.png"></div>
+				<div><a href="https://www.facebook.com/hercuskarte.lv/"><img src="img/fb.png"></a></div>
+				<div><a href="https://www.instagram.com/hercuskarte.lv/"><img src="img/inst.png"></a></div>
+				<!--<div><img src="img/tw.png"></div>
 				<div><img src="img/g.png"></div>
 				<div><img src="img/in.png"></div>
-				<div><img src="img/y.png"></div>
+				<div><img src="img/y.png"></div>-->
 			</div>
 		</div>
 		<div><p><?php echo $language[$lang]['2']?></p></div>

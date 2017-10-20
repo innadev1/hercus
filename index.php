@@ -258,10 +258,10 @@
 				<?php echo $language[$lang]['lizing']?>
 				</p>
 			</div>
-			<div class="buttonflex">
+			<!--<div class="buttonflex">
 				<div><a><img src="img/1.png"></a></div>
 				<div><a><img src="img/2.png"></a></div>
-			</div>
+			</div>-->
 		</div>
 		
 		<div id="block4">
