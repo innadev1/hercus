@@ -293,7 +293,9 @@
 		<?php include 'assets/footer.php'; ?>
 		
 		
-		<!--FORMAS-->
+		<!--FORMAS FORMAS FORMAS FORMAS FORMAS-->
+		
+		<!--GALVENA-->
 		<div id="box1" style="display:none">
 			<div class="box_content">
 				<div class="close"><a><img src="img/close_form.png"></a></div>
@@ -307,6 +309,7 @@
 			</div>
 		</div>
 		
+		<!--ISA-->
 		<div id="box2" style="display:none">
 			<div class="box_content">
 				<div class="green-background"><p>ĪSĀ PIETEIKŠANĀS</p></div>
@@ -385,6 +388,7 @@
 			</div>
 		</div>
 		
+		<!--GARA-->
 		<div id="box3" style="display:none">
 			<div class="box_content">
 				<div class="blue-background"><p>Personīgā informācija</p></div>
