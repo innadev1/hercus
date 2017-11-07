@@ -130,56 +130,66 @@
 
 <html>
     <head>     
-         <meta name="google-site-verification" content="eSPYQKOOBrs3N3ba-4lgJ-AEYJiC9cZ9CxPWFwYSo2k" />
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
-
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="style/index.css">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
 		<link rel="stylesheet" type="text/css" href="style/form.css">
-
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
         <title>hercus</title>
-		<script src="js/jquery-3.2.1.js"></script>
+		
 		<script src="js/jquery.mask.js"> </script>	
-
+		<script src="js/jquery-3.2.1.js"></script>
 		
-		
-	
+			<script>
+					window.onload= function() {
+					document.getElementById('trigger').onclick = function() {
+						openbox('box', this);
+						return false;
+					};
+				};
+					function openbox(id, toggler) {
+						var div = document.getElementById(id);
+						if(div.style.display == 'block') {
+							div.style.display = 'none';
+						}
+						else {
+							div.style.display = 'block';
+						}
+				}
+			</script>
 			
 			<!--formas-->
-		
-
 			<script>
-				$(function(){
-
-
-					
-					$('#menu img').click(function(){
-						$('#box').toggle()
-					})
-
-
-
-					var sent = <?php if (isset($_POST['short_form'])||isset($_POST['long_form'])) { echo "true";}else{echo "false";}; ?>
-
-
-					$(".toggler").click(function () {
-						if (sent) {
-							$('.mailSuccess').css('display','block')
-						}else{
-							$("#box1").css("display","block");
-						}
-					});
-					$(".close").click(function () {
-						$("#box1").css("display","none");
-					});
-				});
+			$(document).ready(function(){
+				$(".toggler").click(function () {
+				$("#box1").css("display","block");
+			});
+				$(".close").click(function () {
+				$("#box1").css("display","none");
+				$("#box2").css("display","none");
+				$("#box3").css("display","none");
+			});
+			
+			
+			
+			
+				$("#isa").click(function () {
+				$("#box2").css("display","block");
+				$("#box1").css("display","none");
+			});
+			
+				$("#gara").click(function () {
+				$("#box3").css("display","block");
+				$("#box1").css("display","none");
+			});
+			
+			});
 			</script>
 			
     </head>
 
 	<body>
-
+	
 		<?php include 'assets/header.php'; ?>
 	
 			<div id="menu">
@@ -197,29 +207,7 @@
 					</ul>
 				</div>
 			</div>
-		
-
-		<!-- PHP IF FORM HAS BEEN SUBMITED-->
-
-			<?php if (isset($_POST['short_form'])||isset($_POST['long_form'])) {
-			?>
-			<div class="mailSuccess">
-				<div class="close"><a><img src="img/close_form_w.png"></a></div>
-				<div>
-					<?php echo $language[$lang]['1'] ?>
-					<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
-				</div>
-			</div>
-
-			<?php
-			} ?>
-
-
-
-
-
-
-
+	
 		<div id="block1">	
 				
 			<div><img src="img/lateko.png"></div>
@@ -229,7 +217,7 @@
 
 				<p><?php echo $language[$lang]['credit'] ?></p>
 				
-				<button class="toggler"><?php echo $language[$lang]['subscribe1'] ?></button>
+				<button class="toggler"><?php echo $language[$lang]['subscribe'] ?></button>
 			</div>
 		</div>
 		
@@ -279,7 +267,7 @@
 		<div id="block4">
 			<div class="content4">
 				<h3><b><?php echo $language[$lang]['how_get_cart']?></b></h3>
-				<button class="toggler"><?php echo $language[$lang]['subscribe1']?></button>
+				<button class="toggler"><?php echo $language[$lang]['subscribe']?></button>
 			</div>
 			
 			<div class="content5">
@@ -301,16 +289,6 @@
 				</div>
 			</div>
 		</div>
-		
-		<div id="block5">
-			<div class="content6">
-				<h3 style="opacity: 0"><?php echo $language[$lang]['block5h3']?></h3>
-				<h5><?php echo $language[$lang]['block5h5']?></h5>
-				<p><?php echo $language[$lang]['block5p']?></p>
-				<br>
-				<p><a href="https://www.latekolizings.lv/" target="_blank">https://www.latekolizings.lv/</a></p>
-			</div>
-		</div>
 	
 		<?php include 'assets/footer.php'; ?>
 		
@@ -323,87 +301,101 @@
 				<div class="close"><a><img src="img/close_form.png"></a></div>
 				
 				<div class="text_in_form">
-				<h5><?php echo $language[$lang]['form_type'];?></h5>
+				<h5>Izvēlies pieteikuma<br>formas veidu!</h5>
 				
-				<button class="button_green" id="isa"><?php echo $language[$lang]['phone_form']; ?></button>
-				<button class="button_blue" id="gara"><?php echo $language[$lang]['online_form']; ?></button>
+				<button class="button_green" id="isa">Īsā pieteikšanās</button>
+				<button class="button_blue" id="gara">Garā pieteikšanās</button>
 				</div>
 			</div>
 		</div>
 		
 		<!--ISA-->
-
-		
 		<div id="box2" style="display:none">
-		
-		<div id="boxx">
-				<div class="box_content">
-					<!-- <div class="green-background"><p><?php echo $language[$lang]['form'] ?></p></div> -->
-					<div class="close"><a><img src="img/close_form_w.png"></a></div>
-					<?php include 'longreg2.php' ?>
-					<p id="counter">1/6</p>
-				</div>
+			<div class="box_content">
+				<div class="green-background"><p>ĪSĀ PIETEIKŠANĀS</p></div>
+				<div class="close"><a><img src="img/close_form.png"></a></div>
+
+					<?php if(isset($_POST['emailsent'])) { ?>
+
+							style="display: block;" <?php
+							
+					}else{
+						?>	
+							 <?php
+					} ?>
+					<?php if(!$mailSuccess){ ?>
+								
+					<div class="remodal" data-remodal-id="modal" style="visibility: visible;">
+
+						<form id="form" name="orderform" method="post" action="shortreg.php">
+
+						<div class="name">
+							<div class="bookinput">
+								<span class=" your-name"><input type="text" value = "<?php if(isset($_POST['name']) && $errors['name'] == 0){ echo $_POST['name']; } ?>" name="name" size="20" class="wpcf7-text" required="required" placeholder="Vārds"></span>
+							</div>
+							<!--ERRROR  -->
+								<?php echo ($error_message_n); ?>
+								<?php echo ($error_message_n2); ?>
+							<!--END-->
+
+							<div class="bookinput">
+								<span class=" your-name"><input type="text" value = "<?php if(isset($_POST['lastname']) && $errors['lastname'] == 0){ echo $_POST['lastname']; } ?>" name="lastname" size="20" class="wpcf7-text" required="required" placeholder="Uzvārds"></span>
+							</div>
+							<!--ERRROR  -->
+								<?php echo ($error_message_l_n); ?>
+								<?php echo ($error_message_l_n2); ?>
+							<!--END-->
+						</div>
+							<!-- PERSONAL CODE -->
+							<div class="bookinput">
+							<span class="your-name" id="code"><input type="text" value = "<?php if(isset($_POST['p_code']) && $errors['p_code'] == 0){ echo $_POST['p_code']; } ?>" name="p_code" size="20" class="wpcf7-text" required="required" placeholder="Personālais kods" id="p_code" data-mask="000000-00000"></span>
+							<?php echo ($error_message_p_code); ?>
+							<?php echo ($error_message_p_code2); ?>
+
+						<div class="kontakti">
+							<div class="bookinput">
+								<span class="your-name"><input type="tel" value = "<?php if(isset($_POST['phone']) && $errors['phone'] == 0){ echo $_POST['phone']; } ?>" name="phone" size="20" class="wpcf7-text" required="required" placeholder="Tel."></span>
+							</div>
+							<!--ERRROR  -->
+								<?php echo ($error_message_p1); ?>
+								<?php echo ($error_message_p2); ?>
+							<!--END-->
+
+							<div class="bookinput">
+								<span class="your-name"><input type="text" value = "<?php if(isset($_POST['mail']) && $errors['mail'] == 0){ echo $_POST['mail']; } ?>" name="mail" size="20" class="wpcf7-text" placeholder="Epasts:"></span>
+							</div>
+							<!--ERRROR  -->
+								<?php echo ($error_message_m); ?>
+							<!--END-->
+						</div>
+						
+							<div class="col-sm-12">
+								<input class="blackbutton" type="submit" name="emailsent" value="Send">
+							</div>					
+
+						</form>
+					
+						<?php
+							}else if($mailSuccess){
+												
+								$checkemail = "<p>Check your Email</p>";
+											
+									echo $checkemail;
+							} ?>					
+						</div>
+					</div>
+				
 			</div>
-		
 		</div>
 		
-
-		
-	
+		<!--GARA-->
 		<div id="box3" style="display:none">
 			<div class="box_content">
-				<div class="blue-background"><p><?php echo $language[$lang]['pers.info'] ?></p></div>
+				<div class="blue-background"><p>Personīgā informācija</p></div>
 				<div class="close"><a><img src="img/close_form.png"></a></div>
 				
-				<!-- coming soon -->
+				coming soon
 				
-			</div>
-		</div>
-
-		<div id="short_form" class="">
-			<div class="box_content">
-				
-				<div class="person_information ">
-				<div class="green-background"><h1><?php echo $language[$lang]['pers.info'] ?></h1><div class="close"><img src="img/close_form_w.png"></div></div>
-						<form id="sform" method="POST" action="index.php">						<!-- NAME -->
-							<div class='inputs' >
-								<div class="bookinput">
-									<label for="s_namea"><?php echo $language[$lang]['f.name'] ?></label>
-									<span class=" your-name"><input type="text" value = "<?php if(isset($_POST['name'])){ echo $_POST['name']; } ?>" name="name" size="20" class="wpcf7-text" required="required" id="s_name" lenght="2" chtype="tekstLen" onkeyup="checkk($(this))"></span>
-								</div>
-
-								<div class="bookinput">
-									<label for="s_lastname"><?php echo $language[$lang]['l.name'] ?></label>
-									<span class="your-name"><input type="text" value = "<?php if(isset($_POST['lastname'])){ echo $_POST['lastname']; } ?>" name="lastname" size="20" class="wpcf7-text" required="required" id="s_lastname" lenght="2" chtype="tekstLen" onkeyup="checkk($(this))"></span>
-								</div>
-
-								<div class="bookinput" style="width: 30%;">
-									<span>
-										<select name="phone_loc" class="option_phone_loc">
-											<option value="LV +371">LV(+371)</option>
-											<option value="EE +372">EE(+372)</option>
-											<option value="LT +370" >LT(+370)</option>
-										</select>
-									</span>
-								</div>
-								<!-- PHONE -->
-								<div class="bookinput" style="width: 70%;">
-									<label for="s_phone"><?php echo $language[$lang]['phone1']?></label>
-									<span class="your-name"><input type="tel" value = "<?php if(isset($_POST['phone'])){ echo $_POST['phone']; } ?>" name="phone" size="20" class="wpcf7-text" required="required" id="s_phone" lenght="8" chtype="tekstLen" onkeyup="checkk($(this))"></span>
-								</div>
-
-								<!-- EMAIL -->
-								<div class="bookinput">
-									<label for="s_email"><?php echo $language[$lang]['email']?></label>
-									<span class="your-name"><input type="text" value = "<?php if(isset($_POST['mail'])){ echo $_POST['mail']; } ?>" name="mail" size="20" class="wpcf7-text"  id="s_email" chtype="emailcheck" onkeyup="checkk($(this))"></span>
-								</div>
-							</div>
-							<div><p><?php echo $language[$lang]['phone_agree']; ?></p></div>
-							<div class="button_submit_in_short_form">
-								<input type="submit" name="short_form" value="<?php echo $language[$lang]['submit_short'] ?>">
-							</div>
-						</form>
-				</div>
 			</div>
 		</div>
 		

@@ -95,13 +95,6 @@ button{
     background-repeat: no-repeat;
     position: relative;
 }
-#block5{
-	height: 47vw;
-    background-image: url(../img/background_5.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}
 .content2{
 	position: relative;
     top: 13vw;
@@ -163,24 +156,6 @@ button{
     font-weight: 300;
     line-height: 1.2vw;
 }
-.content6 {
-	position: relative;
-    top: 14vw;
-    color: white;
-    left: 10vw;
-    width: 38vw;
-}
-.content6 h5{
-	font-size: 1.7vw;
-    font-weight: 300;
-    letter-spacing: 0.05vw;
-    margin-bottom: 1vw;
-	margin:0;
-}
-.content6 a{
-	padding-top: 2vw;
-	font-weight: 600;
-}
 .buttonflex{
 	display: -webkit-box;
     display: -moz-box;
@@ -233,7 +208,6 @@ button{
 #box a:hover{
 	opacity: 1;
 }
-.content6 h3{display: none;}
 @media screen and (max-width: 900px){
 #block1{
 	height: 155vw;
@@ -409,21 +383,6 @@ h6 {
 }
 #box li{
 	padding-bottom:2vw;
-}
-.content6 {
-    left: 0;
-    top: 20vw;
-    width: 100%;
-}
-.content6 h5 {
-    font-size: 5vw;
-    font-weight: 300;
-    letter-spacing: 0.05vw;
-    margin-bottom: 1vw;
-    text-align: center;
-}
-#block5{
-	height: 150vw;
 }
 
 

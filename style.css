@@ -1,0 +1,38 @@
+body{
+
+    
+}
+
+.incorect_input {
+    outline: 2px solid red;
+}
+
+
+
+.box-close{
+
+    background-color: #989292;
+    height: 50px;
+    width: 600px;
+
+}
+
+#but2{
+    opacity: 0.5;
+}
+
+.selected {
+    background: green;
+    display: none;
+}
+.xxx{
+    background-color: skyblue;
+    display: block;
+
+}
+
+.xxx input{
+   
+
+    
+}

@@ -23,12 +23,3 @@ button:focus{
 input:focus{
 	outline: none;
 }
-.bookinput {
-	margin: 7px 0 ;
-}
-.selected h1 {
-	font-size: 18px;
-	font-weight: 700;
-	color: #67b1d9;
-
-}
